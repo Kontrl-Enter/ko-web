@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset = "utf-8">
+  <title>CtrlS Portal - {{SummonerName}}</title>
+
+    <link rel="stylesheet" href="https://cdn.lol.ps/static/prod/bc81a871/_app/immutable/assets/0.c1308bdb.css">
+    <link rel="stylesheet" href="https://cdn.lol.ps/static/prod/bc81a871/_app/immutable/assets/2.e3b98a14.css">
+    <link rel="stylesheet" href="https://cdn.lol.ps/static/prod/bc81a871/_app/immutable/assets/107.405ca9e1.css">
+    <link rel="stylesheet" href="https://cdn.lol.ps/static/prod/bc81a871/_app/immutable/assets/Footer.4a20153a.css">
+    <link rel="stylesheet" href="https://cdn.lol.ps/static/prod/bc81a871/_app/immutable/assets/NotFoundSummonerHeader.87f4d9d1.css">
+    <link rel="stylesheet" href="https://cdn.lol.ps/static/prod/bc81a871/_app/immutable/assets/RankTierChip.9f7f1452.css">
+    <link rel="stylesheet" href="https://cdn.lol.ps/static/prod/bc81a871/_app/immutable/assets/Realtime.6d5a5751.css">
+    <link rel="stylesheet" href="https://cdn.lol.ps/static/prod/bc81a871/_app/immutable/assets/championArguments.36708589.css">
+    <link rel="stylesheet" href="https://cdn.lol.ps/static/prod/bc81a871/_app/immutable/assets/counterHowTo.c8b8cf51.css">
+    <link rel="stylesheet" href="https://cdn.lol.ps/static/prod/bc81a871/_app/immutable/assets/index.4f2f286c.css">
+    <link rel="stylesheet" href="https://cdn.lol.ps/static/prod/bc81a871/_app/immutable/assets/index.890a5b87.css">
+    <link rel="stylesheet" href="https://cdn.lol.ps/static/prod/bc81a871/_app/immutable/assets/index.5735f640.css">
+    <link rel="stylesheet" href="https://cdn.lol.ps/static/prod/bc81a871/_app/immutable/assets/index.e113234a.css">
+    <link rel="stylesheet" href="https://cdn.lol.ps/static/prod/bc81a871/_app/immutable/assets/index.ec5c98f5.css">
+  <style>
+
+  </style>
+
+ </head>
+
+ <body data-sveltekit-preload-data="hover" class="bg-white dark:bg-dark-psgr-darkest" style="background-position: center 270px; background-attachment: scroll !important;"> 
+    <nav id="menu-container" class="desktop:max-w-screen fixed inset-x-0 top-0 z-[1000] bg-psbl-deep transition-all">
+        <div class="flex h-10 flex-row items-center justify-between px-3.5 md:mx-auto md:max-w-[1280px] half-hd:justify-start half-hd:px-0">
+            <div class="flex items-center gap-3">
+                <a class="flex h-full w-[131px] flex-none items-center" href="/"><svg fill="none" viewBox="0 0 262 40" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" class="h-5 text-white">
+                </a>
+                <i class="hidden h-4.5 w-[1px] bg-white opacity-20 desktop:inline-block"></i>
+            </div>
+        <button class="half-hd:hidden s-3TpKf_vqqt89" type="button">
+            <svg fill="none" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" class="text-white">
+                <path fill="currentColor" d="M4.16278 18.525C3.79612 18.525 3.48345 18.4 3.22478 18.15C2.96678 17.9 2.83778 17.5833 2.83778 17.2C2.83778 16.8333 2.96678 16.5207 3.22478 16.262C3.48345 16.004 3.79612 15.875 4.16278 15.875H20.1628C20.5295 15.875 20.8421 16.004 21.1008 16.262C21.3588 16.5207 21.4878 16.8333 21.4878 17.2C21.4878 17.5833 21.3588 17.9 21.1008 18.15C20.8421 18.4 20.5295 18.525 20.1628 18.525H4.16278ZM4.16278 13.325C3.79612 13.325 3.48345 13.196 3.22478 12.938C2.96678 12.6793 2.83778 12.3667 2.83778 12C2.83778 11.6333 2.96678 11.3207 3.22478 11.062C3.48345 10.804 3.79612 10.675 4.16278 10.675H20.1628C20.5295 10.675 20.8421 10.804 21.1008 11.062C21.3588 11.3207 21.4878 11.6333 21.4878 12C21.4878 12.3667 21.3588 12.6793 21.1008 12.938C20.8421 13.196 20.5295 13.325 20.1628 13.325H4.16278ZM4.16278 8.12501C3.79612 8.12501 3.48345 7.99567 3.22478 7.73701C2.96678 7.47901 2.83778 7.16667 2.83778 6.80001C2.83778 6.41667 2.96678 6.10001 3.22478 5.85001C3.48345 5.60001 3.79612 5.47501 4.16278 5.47501H20.1628C20.5295 5.47501 20.8421 5.60001 21.1008 5.85001C21.3588 6.10001 21.4878 6.41667 21.4878 6.80001C21.4878 7.16667 21.3588 7.47901 21.1008 7.73701C20.8421 7.99567 20.5295 8.12501 20.1628 8.12501H4.16278Z">
+                </path>
+            </svg>
+        </button>
+        <div class="mr-auto hidden gap-2 pl-6 half-hd:flex half-hd:gap-4 xl:gap-4">
+            <div class="relative flex-none">
+                <a class="h-10 flex-none justify-center rounded px-2 py-2 text-md font-regular text-white hover:bg-psbl-dark hover:font-medium dark:text-dark-psbk" data-sveltekit-preload-data="tap" href="/statistics">챔피언 숙련도</a> 
+            </div> 
+            <div class="relative flex-none">
+                <a class="h-10 flex-none justify-center rounded px-2 py-2 text-md font-regular text-white hover:bg-psbl-dark hover:font-medium dark:text-dark-psbk" data-sveltekit-preload-data="tap" href="/ranking?lane=-1&amp;page=1&amp;region=kr">개발자 블로그</a> 
+            </div> 
+            <div class="relative flex-none">
+                <a class="h-10 flex-none justify-center rounded px-2 py-2 text-md font-regular text-white hover:bg-psbl-dark hover:font-medium dark:text-dark-psbk" data-sveltekit-preload-data="tap" href="/lab">개발자 연구실</a>
+            </div>
+        </div> 
+        
+    </nav>
+
+    <main class="desktop:min-w-[1280px]">
+        <div class="vm-placement ad-rich6" data-id="63b3eb4d2192300e1d280c49" style="display: none;" data-pos="1100" id="63b3eb4d2192300e1d280c49-1100" data-reg="true">
+        </div>
+        <div id="top-menu-container" class="relative w-full flex-row before:absolute before:inset-0 before:-z-10 before:bg-psbl-gradient desktop:h-auto desktop:min-w-[1100px] desktop:max-w-full before:desktop:hidden">
+            <div class="relative -mt-10 w-full flex-row pt-10 before:absolute before:inset-0 before:-z-10 before:bg-psbl-gradient desktop:h-auto desktop:min-w-[1100px] desktop:max-w-full before:desktop:hidden">
+                <div class="absolute inset-0 bottom-auto hidden h-[311px] bg-cover bg-no-repeat desktop:block" style="background-image: url(https://cdn.gameinsight.co.kr/news/photo/202305/25929_66468_2519.jpg);">
+                </div>
+                <div class="mx-auto flex w-full min-w-[280px] pt-10 desktop:min-w-[1080px] desktop:max-w-[1080px]">
+                    <div class="relative flex flex-grow flex-col p-4 pb-0 desktop:pt-8">
+                        <div class="mb-[22px] w-full">
+                            <div class="flex w-full flex-row items-center rounded-md bg-white desktop:max-w-[480px]">
+                                <div class="w-20 flex-none">
+                                    <div class="relative w-full">
+                                        <button class="flex flex-row items-center justify-between truncate rounded px-2 py-1.5 text-rg disabled:cursor-not-allowed disabled:bg-psgr-disabled disabled:text-psgr-formborder bg-white border border-white text-psbk-sub h-10 h-10 w-full rounded-l-md rounded-r-none !px-2">
+                                            <p class="flex-grow truncate text-left">KR</p> 
+                                            <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" class="h-5 w-5 text-inherit">
+                                            </svg>
+                                        </button> 
+                                    </div>
+                                </div>
+                                <div class="h-6 w-[1px] bg-psgr-formborder"></div>
+                                <div class="relative s-RAZr3egNBlEl search-small search-default">
+                                    <input type="text" id="search-input" class="block h-full w-full !rounded-md bg-white py-2 pl-3 pr-10 text-md font-medium text-psbk focus:outline-0 focus:ring-2 focus:ring-psbl-light s-RAZr3egNBlEl" placeholder="소환사 이름을 입력하세요" required="" autocomplete="off"> 
+                                    <button type="button" onclick="searchPost();" class="pointer-cursor absolute inset-y-0 right-0 flex items-center px-3 text-psbl-medium dark:text-dark-psbl-medium s-RAZr3egNBlEl">
+                                        <svg fill="none" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20px" height="20px">
+                                            <path fill="currentColor" d="M18.5746 20.5752L13.225 15.2496C12.6746 15.6168 12.083 15.896 11.4502 16.0872C10.8166 16.2792 10.1414 16.3752 9.42461 16.3752C7.5246 16.3752 5.9038 15.7128 4.5622 14.388C3.2206 13.0624 2.5498 11.4496 2.5498 9.5496C2.5498 7.6496 3.2206 6.0288 4.5622 4.6872C5.9038 3.3456 7.5246 2.6748 9.42461 2.6748C11.3414 2.6748 12.9582 3.3456 14.275 4.6872C15.5918 6.0288 16.2502 7.6496 16.2502 9.5496C16.2502 10.2664 16.1626 10.9372 15.9874 11.562C15.8122 12.1876 15.5246 12.7584 15.1246 13.2744L20.4994 18.6996C20.7666 18.9668 20.8958 19.2836 20.887 19.65C20.879 20.0164 20.7414 20.3248 20.4742 20.5752C20.2246 20.8416 19.9122 20.9748 19.537 20.9748C19.1618 20.9748 18.841 20.8416 18.5746 20.5752ZM9.42461 13.6248C10.5582 13.6248 11.5206 13.2292 12.3118 12.438C13.1038 11.646 13.4998 10.6832 13.4998 9.5496C13.4998 8.4 13.1082 7.4252 12.325 6.6252C11.5418 5.8252 10.575 5.4252 9.42461 5.4252C8.29181 5.4252 7.321 5.8252 6.5122 6.6252C5.7042 7.4252 5.3002 8.4 5.3002 9.5496C5.3002 10.7 5.7042 11.6668 6.5122 12.45C7.321 13.2332 8.29181 13.6248 9.42461 13.6248Z"></path>
+                                        </svg>
+                                    </button>  
+                                </div>
+                            </div>
+                        </div>
+                        <div id="summoner-name-header-container" class="flex h-[154px] w-[638px] flex-col gap-2">
+                            <div class="flex h-10 w-full gap-2">
+                                <div>
+                                    <div>
+                                        <span class="whitespace-nowrap rounded-2xl bg-psbk px-2 py-1 text-sm text-white">{{S13rank}}</span>
+                                    </div> 
+                                </div> 
+                                <div>
+                                    <div>
+                                        <span class="whitespace-nowrap rounded-2xl bg-psbk px-2 py-1 text-sm text-white">{{S12rank}}</span>
+                                    </div> 
+                                </div>
+                            </div> 
+                            <div class="flex gap-4">
+                                <img class="h-30 w-30 rounded-2xl" src="{{SummonerIcon}}" alt="summoner icon"> 
+                                <div class="flex w-full flex-col gap-[22px]"><div class="flex h-[76px] w-full">
+                                    <div class="flex w-full flex-col justify-end">
+                                        <div class="flex flex-row"> 
+                                        </div> 
+                                        <div class="flex w-full gap-2 text-rg font-medium text-white"><span>{{SummonerRank}}  </span> 
+                                            <i class="not-italic text-psbk-sub">|</i> 
+                                            <span>{{SummonerLP}}</span>
+                                        </div> 
+                                        <div class="flex w-full gap-2 relative">
+                                            <div class="flex flex-row items-center gap-1"> 
+                                                <h1 class="h-8 min-w-0 truncate text-dp1 font-bold text-white max-w-[300px]">{{SummonerName}}</h1>
+                                            </div> 
+                                            <div class="-mt-0.5 flex h-6 w-6 items-center justify-center mt-0.5 cursor-pointer">
+                                                <svg fill="none" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" class="h-6 w-6 text-white hover:text-ui-yl-base dark:hover:text-dark-ui-yl-base ">
+                                                    <path fill="currentColor" d="M9.125 17.45 12 15.725l2.875 1.75-.75-3.275L16.65 12l-3.325-.3L12 8.6l-1.325 3.075-3.325.3 2.525 2.2ZM12 18.8l-4.2 2.55q-.375.225-.775.188-.4-.038-.675-.263-.3-.225-.462-.587-.163-.363-.063-.788l1.125-4.75-3.725-3.225q-.325-.3-.413-.675-.087-.375.013-.725.125-.375.413-.625.287-.25.737-.3l4.9-.425 1.9-4.5q.175-.4.513-.6.337-.2.712-.2.375 0 .713.2.337.2.512.6l1.9 4.5 4.9.425q.45.05.738.3.287.25.412.625.1.35.013.725-.088.375-.413.675L17.05 15.15l1.125 4.75q.1.425-.062.788-.163.362-.463.587-.275.225-.675.263-.4.037-.775-.188Zm0-5.5Z"></path>
+                                                </svg>
+                                            </div> 
+                                            <div class="absolute flex flex-row items-center top-8 gap-2"> 
+                                                
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <div class="flex h-full w-30 flex-col items-end justify-end gap-1 self-end whitespace-nowrap text-right">
+                                        <button class="flex h-8 flex-row items-center justify-center gap-2 rounded bg-white px-3 py-2 text-sm font-bold uppercase text-psbk hover:bg-psbl-mute s-OwKnkHbq5XWO">새로고침
+                                        </button>
+                                    </div>
+                                </div> 
+                                <div class="flex h-6 items-center desktop:mr-[410px] desktop:w-[calc(100%+410px)]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="mx-auto mt-4 w-full min-w-[280px] bg-white pt-2 dark:bg-dark-psgr-darkest desktop:min-w-1080px desktop:max-w-1080px desktop:rounded-t-xl">
+            <div class="flex w-full flex-row border-b-2 border-psbl-pastel px-4 py-3 dark:border-dark-psbl-pastel">
+                <div class="flex w-full flex-row items-center gap-2">
+                    <div class="flex h-8 flex-1 cursor-pointer items-center justify-center rounded border text-rg font-bold uppercase text-psbl-medium hover:bg-psbl-pastel dark:text-dark-psbl-medium dark:hover:bg-dark-psbl-mute desktop:min-w-[48px] desktop:flex-none desktop:border-none desktop:px-2 desktop:py-1 desktop:text-md s-7_MYmAcmN9zc menu-active">
+                        <p class="text-white dark:text-dark-psbk">종합</p>
+                    </div> 
+                    <p class="pl-4 text-rg font-medium text-psbk-sub dark:text-dark-psbk-sub">최근 5경기의 전적입니다.</p> 
+                    <div class="flex flex-grow"></div> 
+                    <div class="z-10 flex flex-none">
+                        <div class="border-psbk-formborder flex w-full flex-row items-center justify-between rounded border p-2 text-center text-sm font-bold text-psbk-sub dark:border-psbk"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div>
+            <section class="mx-auto mb-28 w-full min-w-[280px] bg-white dark:bg-dark-psgr-darkest desktop:min-w-1080px desktop:max-w-1080px desktop:rounded-b-xl desktop:px-4 desktop:py-5">
+                <div class="flex w-full flex-col justify-between desktop:flex-row desktop:gap-x-4">
+                    <div class="flex flex-col gap-4 desktop:mr-4 desktop:w-[323px]">
+                        <div id="capture" class="flex flex-col rounded border-psbl-pastel bg-white p-4 dark:border-dark-psbl-pastel dark:bg-dark-psgr-darkest desktop:border"> 
+                            <div class="flex flex-row gap-2 text-rg font-bold text-psbk-sub dark:text-psgr-base">
+                                <span class="flex items-center">{{RankType}}</span> 
+                                <span class="flex-grow"></span> 
+                                <div class="flex flex-col items-center">
+                                    
+                                </div>
+                            </div> 
+                            <hr class="my-2 border-psgr-formborder dark:border-dark-psgr-formborder desktop:mb-4"> 
+                            <div class="flex flex-row gap-4">
+                                <div class="h-18 w-18 flex-none rounded bg-psbl-mute p-1 dark:bg-psgr-deep">
+                                    <img class="h-16 w-16" src="{{tierimg}}" alt="summonerrankicon">
+                                </div> 
+                                <div class="flex flex-col justify-center gap-1.5">
+                                    <div class="min-h-6 flex flex-row flex-wrap items-center gap-2 gap-y-0">
+                                        <div class="flex flex-none items-center justify-center rounded-sm px-1 py-px s-3AavK2sut3jD px-2 bg-challenger">
+                                            <span class="flex-none font-bold s-3AavK2sut3jD text-md text-white">{{SummonerRank}}</span>
+                                        </div> 
+                                        <p class="dark:text-dark-psgr-sub text-md text-psbk-sub dark:text-dark-psbk-sub">{{SummonerLP}}</p>
+                                    </div> 
+                                    <div class="flex flex-row flex-wrap gap-2 gap-y-0">
+                                        <p class="dark:text-dark-psgr text-lg font-bold text-psbk dark:text-dark-psbk">{{winrate}}</p> 
+                                        <p class="dark:text-dark-psgr-sub self-center text-md font-medium text-psbk-sub dark:text-dark-psbk-sub desktop:text-rg">{{wininfo}}</p>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+
+                        <div class="flex flex-none rounded">
+                        <div class="flex w-full flex-col items-center gap-1">
+                            <div class="relative flex flex-shrink-0 flex-grow-0 items-center justify-start gap-2 self-stretch px-4 py-2 desktop:px-0 desktop:py-4">
+                                <p class="text-base h-4 w-[177px] flex-grow text-left font-bold text-psbk-sub dark:text-dark-psbk-sub">TOP 5 소환사</p> 
+                                <div class="flex h-8">
+                                    <div class="relative w-full">
+                                        <div class="flex flex-row items-center justify-between truncate rounded px-2 py-1.5 text-rg disabled:cursor-not-allowed disabled:bg-psgr-disabled disabled:text-psgr-formborder bg-psbl-mute border border-psbl-mute text-psbl-medium focus:bg-psbl-pastel focus:border-psbl-pastel dark:bg-dark-psbl-mute dark:border-dark-psbl-mute dark:text-dark-psbl-medium dark:focus:bg-dark-psbl-pastel dark:focus:border-dark-psbl-pastel h-8 w-28">
+                                            <p class="flex-grow truncate text-left">시즌 14</p> 
+                                            <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" class="h-5 w-5 text-inherit"></svg>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+
+                        <div class="flex w-full flex-row items-center justify-between gap-2 px-4 text-sm font-medium uppercase text-psbk-sub first:rounded-t last:rounded-b dark:text-dark-psbk-sub desktop:px-2">
+                            <p class="flex flex-grow justify-start py-1">소환사</p> 
+                            <p class="flex w-10 justify-center py-1">티어</p> <p class="flex w-10 justify-center py-1 en:w-14">LP</p> 
+                            <p class="flex w-12 justify-center py-1 text-right en:w-22">승률</p>
+                        </div>
+
+                        <div class="flex w-full flex-col">
+                            <div class="flex w-full flex-row justify-between gap-2 px-4 py-2 odd:bg-psbl-mute even:bg-psbl-pale dark:text-dark-psbk dark:odd:bg-dark-psbl-mute dark:even:bg-dark-psbl-pale desktop:h-12 desktop:p-2 desktop:first:rounded-t desktop:last:rounded-b">
+                                <div class="flex w-30 flex-none items-center justify-start overflow-hidden py-1">
+                                    <a class="w-full truncate text-rg font-bold text-psbk hover:underline dark:text-dark-psbk" href="/summoner/베르시?sid=NkjNcTPP9Y-P-CoOcQEdSNmsXfe8y82u6ILwykl3n88i_abh7FZOGziugA&amp;region=kr" data-sveltekit-preload-data="tap">{{Ranker1name}}</a>
+                                </div> 
+                                <div class="flex w-20 flex-none items-center justify-center py-1 text-center text-sm font-medium desktop:text-rg">{{Ranker1tier}}</div> 
+                                <div class="flex w-10 flex-none items-center justify-center py-1 text-center text-sm font-medium en:w-14 desktop:text-rg">{{Ranker1LP}}</div> 
+                                <div class="flex w-12 flex-none items-center justify-center py-1 text-right en:w-22">
+                                    <p class="text-center text-sm font-medium desktop:text-rg desktop:font-bold text-ui-gn-base dark:text-dark-ui-gn-base">{{Ranker1winrate}}</p>
+                                </div> 
+                            </div>
+                            <div class="flex w-full flex-row justify-between gap-2 px-4 py-2 odd:bg-psbl-mute even:bg-psbl-pale dark:text-dark-psbk dark:odd:bg-dark-psbl-mute dark:even:bg-dark-psbl-pale desktop:h-12 desktop:p-2 desktop:first:rounded-t desktop:last:rounded-b">
+                                <div class="flex w-30 flex-none items-center justify-start overflow-hidden py-1">
+                                    <a class="w-full truncate text-rg font-bold text-psbk hover:underline dark:text-dark-psbk" href="/summoner/River66?sid=xfLM7XOghjIb77bRrQHgyGERHDK0aF42O2QtSgc_DhMNFCqOJyxJZUAb-A&amp;region=kr" data-sveltekit-preload-data="tap">{{Ranker2name}}</a>
+                                </div> 
+                                <div class="flex w-20 flex-none items-center justify-center py-1 text-center text-sm font-medium desktop:text-rg">{{Ranker2tier}}</div> 
+                                <div class="flex w-10 flex-none items-center justify-center py-1 text-center text-sm font-medium en:w-14 desktop:text-rg">{{Ranker2LP}}</div> 
+                                <div class="flex w-12 flex-none items-center justify-center py-1 text-right en:w-22">
+                                    <p class="text-center text-sm font-medium desktop:text-rg desktop:font-bold text-ui-gn-base dark:text-dark-ui-gn-base">{{Ranker2winrate}}</p>
+                                </div> 
+                            </div>
+                            <div class="flex w-full flex-row justify-between gap-2 px-4 py-2 odd:bg-psbl-mute even:bg-psbl-pale dark:text-dark-psbk dark:odd:bg-dark-psbl-mute dark:even:bg-dark-psbl-pale desktop:h-12 desktop:p-2 desktop:first:rounded-t desktop:last:rounded-b">
+                                <div class="flex w-30 flex-noneitems-center justify-start overflow-hidden py-1">
+                                    <a class="w-full truncate text-rg font-bold text-psbk hover:underline dark:text-dark-psbk" href="/summoner/애니랑뽀뽀쪽?sid=qo5mjFX3yAOZJKhIc_VpJpGCmbUdZg57UrQCI9ogfJBACwY&amp;region=kr" data-sveltekit-preload-data="tap">{{Ranker3name}}</a>
+                                </div> 
+                                <div class="flex w-20 flex-none items-center justify-center py-1 text-center text-sm font-medium desktop:text-rg">{{Ranker3tier}}</div> 
+                                <div class="flex w-10 flex-none items-center justify-center py-1 text-center text-sm font-medium en:w-14 desktop:text-rg">{{Ranker3LP}}</div> 
+                                <div class="flex w-12 flex-none items-center justify-center py-1 text-right en:w-22">
+                                    <p class="text-center text-sm font-medium desktop:text-rg desktop:font-bold text-ui-gn-base dark:text-dark-ui-gn-base">{{Ranker3winrate}}</p>
+                                </div> 
+                            </div>
+                            <div class="flex w-full flex-row justify-between gap-2 px-4 py-2 odd:bg-psbl-mute even:bg-psbl-pale dark:text-dark-psbk dark:odd:bg-dark-psbl-mute dark:even:bg-dark-psbl-pale desktop:h-12 desktop:p-2 desktop:first:rounded-t desktop:last:rounded-b">
+                                <div class="flex w-30 flex-none items-center justify-start overflow-hidden py-1">
+                                    <a class="w-full truncate text-rg font-bold text-psbk hover:underline dark:text-dark-psbk" href="/summoner/잘지내고있냐고?sid=F3i9mD_GVi8N3oefpPzl_thh62khriZVUjWz-icDkVC1rA&amp;region=kr" data-sveltekit-preload-data="tap">{{Ranker4name}}</a>
+                                </div> 
+                                <div class="flex w-20 flex-none items-center justify-center py-1 text-center text-sm font-medium desktop:text-rg">{{Ranker4tier}}</div> 
+                                <div class="flex w-10 flex-none items-center justify-center py-1 text-center text-sm font-medium en:w-14 desktop:text-rg">{{Ranker4LP}}</div> 
+                                <div class="flex w-12 flex-none items-center justify-center py-1 text-right en:w-22">
+                                    <p class="text-center text-sm font-medium desktop:text-rg desktop:font-bold text-ui-gn-base dark:text-dark-ui-gn-base">{{Ranker4winrate}}</p>
+                                </div> 
+                            </div>
+                            <div class="flex w-full flex-row justify-between gap-2 px-4 py-2 odd:bg-psbl-mute even:bg-psbl-pale dark:text-dark-psbk dark:odd:bg-dark-psbl-mute dark:even:bg-dark-psbl-pale desktop:h-12 desktop:p-2 desktop:first:rounded-t desktop:last:rounded-b">
+                                <div class="flex w-30 flex-none items-center justify-start overflow-hidden py-1">
+                                    <a class="w-full truncate text-rg font-bold text-psbk hover:underline dark:text-dark-psbk" href="/summoner/백정 슈가?sid=IpbfefW00p-AuR2yg9TmP8i6VTUzSz9iTCbLm6pDEU-gqrw&amp;region=kr" data-sveltekit-preload-data="tap">{{Ranker5name}}</a>
+                                </div> 
+                                <div class="flex w-20 flex-none items-center justify-center py-1 text-center text-sm font-medium desktop:text-rg">{{Ranker5tier}}</div> 
+                                <div class="flex w-10 flex-none items-center justify-center py-1 text-center text-sm font-medium en:w-14 desktop:text-rg">{{Ranker5LP}}</div> 
+                                <div class="flex w-12 flex-none items-center justify-center py-1 text-right en:w-22">
+                                    <p class="text-center text-sm font-medium desktop:text-rg desktop:font-bold text-ui-gn-base dark:text-dark-ui-gn-base">{{Ranker5winrate}}</p>
+                                </div> 
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+                    <div class="flex flex-col gap-4 bg-psgr-light px-4 pt-6 dark:bg-dark-psgr-darkest desktop:w-[693px] desktop:bg-transparent desktop:px-0 desktop:pt-0 dark:desktop:bg-transparent">
+                        <div class="flex flex-col items-center justify-start gap-4 rounded-lg bg-white p-4 px-4 dark:bg-psgr-deep desktop:w-[693px] desktop:shadow-psblue-sm desktop:dark:shadow-none">
+                            <div class="flex flex-shrink-0 flex-grow-0 flex-col items-center justify-start gap-4 self-stretch desktop:flex-row">
+                                <div class="flex flex-shrink-0 flex-grow-0 flex-col items-start justify-start self-stretch border-b border-psgr-border bg-white  dark:border-dark-psgr-border dark:bg-dark-psgr-darkest desktop:px-0">
+                                    <p class="flex h-6 w-full place-items-center text-left text-sm font-bold text-psbk-sub dark:text-dark-psbk-sub desktop:h-8 desktop:text-rg desktop:font-medium">선호 역할군</p>
+                                    <div class="flex flex-shrink-0 flex-grow-0 items-end justify-start gap-1 self-stretch">
+
+                                        <div class="relative flex flex-1 flex-grow flex-col items-center justify-start gap-1 rounded py-2 text-psbk-sub">
+                                                <img class="h-7 w-7" src="https://i.namu.wiki/i/kncs_1ScAh-MbgHZSVju0ZGKQNNAgpqRqHkk15fG40d2FC-4dy5M87cJcgEM9JTaXd_8eafB8b7nQ6PTzNXagQ.webp" alt="summonerrankicon">
+                                                <path d="M2.15479 2.155V6.19V18.77L6.18979 14.73V6.19H14.7348L18.7698 2.155H2.15479Z" fill="currentColor"></path>
+                                            <p class="h-4 w-full flex-shrink-0 flex-grow-0 self-stretch text-center text-sm font-medium">{{Tankrate}}</p> 
+                                            <p class="h-4 flex-shrink-0 flex-grow-0 self-stretch text-center text-sm font-medium">{{Tankcount}}</p>
+                                        </div> 
+                                        <div class="relative flex flex-1 flex-grow flex-col items-center justify-start gap-1 rounded py-2 text-psbk-sub">
+                                                <img class="h-7 w-7" src="https://i.namu.wiki/i/sLxQnxFKX6wdxLpzQcDJFkbdGfE9nxCN7C95V4qhejBtEhFB2V6F3SWmzHArD_dRauxXoCgvOKjdTM0saSwYdQ.webp" alt="summonerrankicon">
+                                                <path d="M2.15479 2.155V6.19V18.77L6.18979 14.73V6.19H14.7348L18.7698 2.155H2.15479Z" fill="currentColor"></path>
+                                            <p class="h-4 w-full flex-shrink-0 flex-grow-0 self-stretch text-center text-sm font-medium">{{Supportrate}}</p> 
+                                            <p class="h-4 flex-shrink-0 flex-grow-0 self-stretch text-center text-sm font-medium">{{Supportcount}}</p>
+                                        </div> 
+                                        <div class="relative flex flex-1 flex-grow flex-col items-center justify-start gap-1 rounded py-2 text-psbk-sub">
+                                            <img class="h-7 w-7" src="https://i.namu.wiki/i/O2d7WzGNUQrHRS38Q83V5_omK563tlJV5rncH05vMV6dgoLEnbz070imSJzOtpEK7DPA-qLJOxvuqTDTNJi38A.webp" alt="summonerrankicon">
+                                                <path d="M2.15479 2.155V6.19V18.77L6.18979 14.73V6.19H14.7348L18.7698 2.155H2.15479Z" fill="currentColor"></path> 
+                                            <p class="h-4 flex-shrink-0 flex-grow-0 self-stretch text-center text-sm font-medium">{{Assassinrate}}</p> 
+                                            <p class="h-4 flex-shrink-0 flex-grow-0 self-stretch text-center text-sm font-medium">{{Assassincount}}</p>
+                                        </div> 
+                                        <div class="relative flex flex-1 flex-grow flex-col items-center justify-start gap-1 rounded py-2 text-psbk-sub">
+                                            <img class="h-7 w-7" src="https://i.namu.wiki/i/D1kbq9Of-CnFbkkmK5p1b8GPKxaGmvAGohCODQhmhtBjp9uftxuiNixlX_3BRKk_fiEtav6VELsiinZOi0iWSQ.webp" alt="summonerrankicon">
+                                                <path d="M2.15479 2.155V6.19V18.77L6.18979 14.73V6.19H14.7348L18.7698 2.155H2.15479Z" fill="currentColor"></path>
+                                            </svg> 
+                                            <p class="h-4 flex-shrink-0 flex-grow-0 self-stretch text-center text-sm font-medium">{{Fighterrate}}</p> 
+                                            <p class="h-4 flex-shrink-0 flex-grow-0 self-stretch text-center text-sm font-medium">{{Fightercount}}</p>
+                                        </div> 
+                                        <div class="relative flex flex-1 flex-grow flex-col items-center justify-start gap-1 rounded py-2 text-psbk-sub">
+                                            <img class="h-7 w-7" src="https://i.namu.wiki/i/XmCcY-dDmRwyABVp16nH6_wql8ptMIEO9y9Va5VSunbxaL8tIWnyZ6m7RM_5UQi9FT7HloqAgxlwZNH74_sIKA.webp" alt="summonerrankicon">
+                                                <path d="M2.15479 2.155V6.19V18.77L6.18979 14.73V6.19H14.7348L18.7698 2.155H2.15479Z" fill="currentColor"></path>
+                                            </svg> 
+                                            <p class="h-4 flex-shrink-0 flex-grow-0 self-stretch text-center text-sm font-medium">{{Marksmanrate}}</p> 
+                                            <p class="h-4 flex-shrink-0 flex-grow-0 self-stretch text-center text-sm font-medium">{{Marksmancount}}</p>
+                                        </div> 
+                                        <div class="relative flex flex-1 flex-grow flex-col items-center justify-start gap-1 rounded py-2 text-psbk-sub">
+                                            <img class="h-7 w-7" src="https://i.namu.wiki/i/MwVYQU4sN4QmbQuQvizZwXlP4iy4K4wR9epsCrtuGfuGxC5CdWLwMDGiihpS97kFxgzBEdZr96_WYiNUg_1R8Q.webp" alt="summonerrankicon">
+                                                <path d="M2.15479 2.155V6.19V18.77L6.18979 14.73V6.19H14.7348L18.7698 2.155H2.15479Z" fill="currentColor"></path> 
+                                            <p class="h-4 flex-shrink-0 flex-grow-0 self-stretch text-center text-sm font-medium">{{Magerate}}</p> 
+                                            <p class="h-4 flex-shrink-0 flex-grow-0 self-stretch text-center text-sm font-medium">{{Magecount}}</p>
+                                        </div> 
+                                    </div> 
+                                    <div class="flex h-6 w-full items-center justify-center text-center text-sm text-psbk-sub dark:text-dark-psbk-sub">숙련도 상위 20개의 챔피언만 종합했습니다.
+                                    </div>
+                                </div> 
+                                <div class="relative flex flex-grow flex-col items-start justify-start gap-x-2 gap-y-2 self-stretch desktop:gap-y-0">
+                                    <p class="flex h-6 w-full place-items-center text-left text-sm font-bold text-psbk-sub dark:text-dark-psbk-sub desktop:h-8 desktop:text-rg desktop:font-medium">최애의 아이</p> 
+                                    <div class="flex w-full items-start justify-start gap-2 self-stretch">
+                                        <div class="relative flex flex-1 flex-col items-center justify-center gap-2 mobile-small:flex-row desktop:h-15">
+                                            <div class="h-8 w-8 flex-none self-center overflow-hidden rounded-md desktop:h-14 desktop:w-14">
+                                                <img src={{champ1img}} alt="championPortrait" class="scale-125">
+                                            </div> 
+                                                <div class="relative flex flex-grow flex-col place-items-center justify-center gap-y-0 mobile-small:place-items-start desktop:h-14 desktop:gap-y-1">
+                                                    <p class="flex-shrink-0 flex-grow-0 truncate text-left text-sm font-bold desktop:w-full desktop:text-rg text-ui-bl-base dark:text-dark-ui-bl-base">{{champ1name}}</p> 
+                                                    <p class="flex-shrink-0 flex-grow-0 truncate text-left text-xs font-medium text-psbk-sub dark:text-dark-psbk-sub desktop:w-full">{{champ1level}}</p> 
+                                                    <p class="flex-shrink-0 flex-grow-0 truncate text-left text-xs font-medium text-psbk-sub dark:text-dark-psbk-sub desktop:w-full">{{champ1points}}</p>
+                                                </div> 
+                                            </div>
+                                            <div class="relative flex flex-1 flex-col items-center justify-center gap-2 mobile-small:flex-row desktop:h-15">
+                                                <div class="h-8 w-8 flex-none self-center overflow-hidden rounded-md desktop:h-14 desktop:w-14">
+                                                    <img src={{champ2img}} alt="championPortrait" class="scale-125">
+                                                </div> 
+                                                <div class="relative flex flex-grow flex-col place-items-center justify-center gap-y-0 mobile-small:place-items-start desktop:h-14 desktop:gap-y-1">
+                                                    <p class="flex-shrink-0 flex-grow-0 truncate text-left text-sm font-bold desktop:w-full desktop:text-rg text-ui-bl-base dark:text-dark-ui-bl-base">{{champ2name}}</p> 
+                                                    <p class="flex-shrink-0 flex-grow-0 truncate text-left text-xs font-medium text-psbk-sub dark:text-dark-psbk-sub desktop:w-full">{{champ2level}}</p> 
+                                                    <p class="flex-shrink-0 flex-grow-0 truncate text-left text-xs font-medium text-psbk-sub dark:text-dark-psbk-sub desktop:w-full">{{champ2points}}</p>
+                                                </div> 
+                                            </div>
+                                            <div class="relative flex flex-1 flex-col items-center justify-center gap-2 mobile-small:flex-row desktop:h-15">
+                                                <div class="h-8 w-8 flex-none self-center overflow-hidden rounded-md desktop:h-14 desktop:w-14">
+                                                    <img src={{champ3img}} alt="championPortrait" class="scale-125">
+                                                </div> 
+                                                <div class="relative flex flex-grow flex-col place-items-center justify-center gap-y-0 mobile-small:place-items-start desktop:h-14 desktop:gap-y-1">
+                                                    <p class="flex-shrink-0 flex-grow-0 truncate text-left text-sm font-bold desktop:w-full desktop:text-rg text-ui-bl-base dark:text-dark-ui-bl-base">{{champ3name}}</p> 
+                                                    <p class="flex-shrink-0 flex-grow-0 truncate text-left text-xs font-medium text-psbk-sub dark:text-dark-psbk-sub desktop:w-full">{{champ3level}}</p> 
+                                                    <p class="flex-shrink-0 flex-grow-0 truncate text-left text-xs font-medium text-psbk-sub dark:text-dark-psbk-sub desktop:w-full">{{champ3points}}</p>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+
+                            <div id="addInner" class="-mx-4 flex w-[calc(100%_+_32px)] flex-col gap-px bg-white dark:bg-dark-psgr-darkest desktop:mx-0 desktop:w-auto desktop:gap-2">
+                            </div>
+                            <div class="mt-2 w-full gap-px rounded-md border border-psbk-sub bg-white hover:bg-psbl-pale dark:border-dark-psgr-base dark:bg-psgr-dark dark:hover:bg-psgr-base desktop:mx-0 desktop:w-auto desktop:gap-2">
+                                <button type="button" onclick = "moreblock();"class="w-full py-2 text-center text-xl font-bold text-psbk-sub hover:text-psbk dark:text-dark-psgr-base">더보기</button>
+                            </div>
+
+
+
+            </section>
+
+    </main>
+  
+
+ </body>
+</html>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    var basestring = `<div class="relative flex flex-row">
+                                        <div class="{40}">
+                                            <div class="flex flex-col desktop:flex-row">
+                                                <div class="flex flex-none flex-col justify-around gap-1 desktop:w-22">
+                                                    <div class="flex flex-row items-center gap-2 bg-opacity-10 px-2 py-0.5 pr-8 dark:bg-opacity-10 desktop:flex-col desktop:items-start desktop:gap-0 desktop:bg-transparent desktop:p-0 dark:desktop:bg-transparent bg-ui-bl-base dark:bg-dark-ui-bl-base">
+                                                        <p class="{41}">{14}</p> 
+                                                        <div class="flex flex-grow flex-row justify-between gap-1 py-1 desktop:flex-none desktop:justify-start">
+                                                            <p class="order-2 self-end text-xs font-medium text-psbk dark:text-dark-psbk desktop:order-none desktop:flex-none desktop:text-sm">{15}</p>
+                                                        </div> 
+                                                        <div class="flex flex-grow flex-row justify-between gap-0 py-1 desktop:flex-none desktop:justify-start">
+                                                            <p class="text-xs text-psbk-sub dark:text-dark-psbk-sub desktop:text-sm">{19}</p>
+                                                        </div> 
+
+                                                    </div> 
+                                                </div> 
+                                                <div class="flex flex-row gap-2">
+                                                    <div class="flex flex-col justify-center gap-1 p-2 pr-0 desktop:w-[210px] desktop:p-0">
+                                                        <div class="flex flex-row gap-0.5">
+                                                            <div class="relative h-8.5 w-8.5 overflow-hidden rounded object-none desktop:h-14 desktop:w-14">
+                                                                <img src="{0}" alt="champion" class="scale-125"> 
+                                                                <p class="absolute bottom-0 right-0 block h-3 w-5 rounded-br rounded-tl bg-black bg-opacity-[0.81] text-center text-xs font-medium leading-[12px] text-white desktop:h-4 desktop:leading-[16px]">{18}</p>
+                                                            </div> 
+                                                            <div class="flex flex-col gap-0.5">
+                                                                <div>
+                                                                    <div>
+                                                                        <div class="flex h-4 w-4 desktop:h-[26px] desktop:w-[26px]">
+                                                                            <img src="{3}" alt="spell 0" class="rounded-sm desktop:rounded">
+                                                                        </div> 
+                                                                    </div> 
+                                                                </div>
+                                                                <div>
+                                                                    <div>
+                                                                        <div class="flex h-4 w-4 desktop:h-[26px] desktop:w-[26px]">
+                                                                            <img src="{4}" alt="spell 1" class="rounded-sm desktop:rounded">
+                                                                        </div> 
+                                                                    </div> 
+                                                                </div>
+                                                            </div> 
+                                                            <div class="flex flex-col gap-0.5">
+                                                                <div>
+                                                                    <div>
+                                                                        <div class="flex h-4 w-4 items-center justify-center rounded-full bg-psbk dark:bg-psbk desktop:h-[26px] desktop:w-[26px]">
+                                                                            <img src="{1}" alt="main rune" class="">
+                                                                        </div>
+                                                                    </div> 
+                                                                </div> 
+                                                                <div class="flex h-4 w-4 items-center justify-center rounded-full bg-psbk dark:bg-psbk desktop:h-[26px] desktop:w-[26px]">
+                                                                    <img src="{2}" alt="sub rune" class="scale-75">
+                                                                </div>
+                                                            </div> 
+                                                            <div class="ml-1 flex flex-grow flex-col justify-center gap-1 self-center self-stretch desktop:ml-0 desktop:items-center"><p class="text-sm font-bold text-psbk dark:text-dark-psbk desktop:text-rg">{6}</p> 
+                                                                <p class="text-sm font-medium text-psbk-sub dark:text-dark-psbk-sub desktop:text-rg">{17} KDA</p>
+                                                            </div>
+                                                        </div> 
+                                                        <div class="flex flex-row gap-1">
+                                                            <div>
+                                                                <div>
+                                                                    <div class="flex h-6.5 w-6.5">
+                                                                        <img src="{7}" alt="item" class="h-6.5 w-6.5 rounded">
+                                                                    </div> 
+                                                                </div> 
+                                                            </div>
+                                                            <div>
+                                                                <div>
+                                                                    <div class="flex h-6.5 w-6.5">
+                                                                        <img src="{8}" alt="item" class="h-6.5 w-6.5 rounded">
+                                                                    </div> 
+                                                                </div> 
+                                                            </div>
+                                                            <div>
+                                                                <div>
+                                                                    <div class="flex h-6.5 w-6.5">
+                                                                        <img src="{9}" alt="item" class="h-6.5 w-6.5 rounded">
+                                                                    </div> 
+                                                                </div> 
+                                                            </div>
+                                                            <div>
+                                                                <div>
+                                                                    <div class="flex h-6.5 w-6.5">
+                                                                        <img src="{10}" alt="item" class="h-6.5 w-6.5 rounded">
+                                                                    </div> 
+                                                                </div> 
+                                                            </div>
+                                                            <div>
+                                                                <div>
+                                                                    <div class="flex h-6.5 w-6.5">
+                                                                        <img src="{11}" alt="item" class="h-6.5 w-6.5 rounded">
+                                                                    </div> 
+                                                                </div> 
+                                                            </div>
+                                                            <div>
+                                                                <div>
+                                                                    <div class="flex h-6.5 w-6.5">
+                                                                        <img src="{12}" alt="item" class="h-6.5 w-6.5 rounded"></div> 
+                                                                    </div> 
+                                                                </div>
+                                                                <div>
+                                                                    <div>
+                                                                        <div class="flex h-6.5 w-6.5">
+                                                                            <img src="{13}" alt="item" class="h-6.5 w-6.5 rounded">
+                                                                        </div> 
+                                                                    </div> 
+                                                                </div>
+                                                            </div>
+                                                        </div> 
+                                                        <div class="flex flex-grow flex-col items-center justify-center border-psgr-border dark:border-dark-psgr-border desktop:mt-0 desktop:w-[120px] desktop:gap-1 desktop:self-center desktop:self-stretch desktop:border-l desktop:px-2">
+                                                            <div class="flex w-full flex-none flex-col items-start justify-start"> 
+                                                                <div class="relative flex h-4 flex-shrink-0 flex-grow-0 items-center justify-center gap-1 self-stretch desktop:py-0.5">
+                                                                    <p class="flex-shrink-0 flex-grow-0 text-center text-xs font-medium text-psbk-sub dark:text-dark-psbk-sub">CS</p> 
+                                                                    <p class="flex-shrink-0 flex-grow-0 text-left text-xs font-bold text-psbk dark:text-dark-psbk desktop:text-sm">{5}</p>
+                                                                </div> 
+                                                                <div class="relative flex h-4 flex-shrink-0 flex-grow-0 items-center justify-center gap-1 self-stretch">
+                                                                    <p class="flex-shrink-0 flex-grow-0 text-center text-xs font-medium text-psbk-sub dark:text-dark-psbk-sub">포지션</p> 
+                                                                    <p class="flex-shrink-0 flex-grow-0 text-left text-xs font-bold text-psbk dark:text-dark-psbk desktop:text-sm">{16}</p>
+                                                                </div>
+                                                            </div> 
+                                                            <div class="flex items-center justify-center gap-1"> 
+                                                            </div>
+                                                        </div> 
+                                                        <div class="flex flex-row gap-1">
+                                                            <div class="flex h-full w-4 flex-col justify-between gap-1 overflow-hidden">
+                                                                <div class="flex h-4 w-4 overflow-hidden rounded-sm">
+                                                                    <img class="scale-125" src="{20}" alt="champion"> 
+                                                                </div>
+                                                                <div class="flex h-4 w-4 overflow-hidden rounded-sm">
+                                                                    <img class="scale-125" src="{21}" alt="champion"> 
+                                                                </div>
+                                                                <div class="flex h-4 w-4 overflow-hidden rounded-sm">
+                                                                    <img class="scale-125" src="{22}" alt="champion"> 
+                                                                </div>
+                                                                <div class="flex h-4 w-4 overflow-hidden rounded-sm">
+                                                                    <img class="scale-125" src="{23}" alt="champion"> 
+                                                                </div>
+                                                                <div class="flex h-4 w-4 overflow-hidden rounded-sm">
+                                                                    <img class="scale-125" src="{24}" alt="champion"> 
+                                                                </div>
+                                                            </div> 
+                                                            <div class="flex h-full flex-col gap-1">
+                                                                <a href="/summoner?name={30}/" data-sveltekit-preload-data="tap" class="flex flex-col h-4 justify-center items-start overflow-clip">
+                                                                    <div class="h-3 w-18 flex-none flex items-center font-medium text-psbk-sub dark:text-dark-psbk-sub">
+                                                                        <p class="truncate text-left text-xs">{30}</p>
+                                                                    </div> 
+                                                                </a>
+                                                                <a href="/summoner?name={31}/" data-sveltekit-preload-data="tap" class="flex flex-col h-4 justify-center items-start overflow-clip">
+                                                                    <div class="h-3 w-18 flex-none flex items-center font-medium text-psbk-sub dark:text-dark-psbk-sub">
+                                                                        <p class="truncate text-left text-xs">{31}</p>
+                                                                    </div> 
+                                                                </a>
+                                                                <a href="/summoner?name={32}/" data-sveltekit-preload-data="tap" class="flex flex-col h-4 justify-center items-start overflow-clip">
+                                                                    <div class="h-3 w-18 flex-none flex items-center font-medium text-psbk-sub dark:text-dark-psbk-sub">
+                                                                        <p class="truncate text-left text-xs">{32}</p>
+                                                                    </div> 
+                                                                </a>
+                                                                <a href="/summoner?name={33}/" data-sveltekit-preload-data="tap" class="flex flex-col h-4 justify-center items-start overflow-clip">
+                                                                    <div class="h-3 w-18 flex-none flex items-center font-medium text-psbk-sub dark:text-dark-psbk">
+                                                                        <p class="truncate text-left text-xs">{33}</p>
+                                                                    </div> 
+                                                                </a>
+                                                                <a href="/summoner?name={34}/" data-sveltekit-preload-data="tap" class="flex flex-col h-4 justify-center items-start overflow-clip">
+                                                                    <div class="h-3 w-18 flex-none flex items-center font-medium text-psbk-sub dark:text-dark-psbk-sub">
+                                                                        <p class="truncate text-left text-xs">{34}</p>
+                                                                    </div> 
+                                                                </a>
+                                                            </div> 
+                                                            <div class="flex flex-col gap-1">
+                                                                <a href="/summoner?name={35}/" data-sveltekit-preload-data="tap" class="flex flex-col h-4 justify-center items-end overflow-clip">
+                                                                    <div class="h-3 w-18 flex-none flex items-center justify-end font-medium text-psbk-sub dark:text-dark-psbk-sub">
+                                                                        <p class="truncate text-right text-xs">{35}</p>
+                                                                    </div> 
+                                                                </a>
+                                                                <a href="/summoner?name={36}/" data-sveltekit-preload-data="tap" class="flex flex-col h-4 justify-center items-end overflow-clip">
+                                                                    <div class="h-3 w-18 flex-none flex items-center justify-end font-medium text-psbk-sub dark:text-dark-psbk-sub">
+                                                                        <p class="truncate text-right text-xs">{36}</p>
+                                                                    </div> 
+                                                                </a>
+                                                                <a href="/summoner?name={37}/" data-sveltekit-preload-data="tap" class="flex flex-col h-4 justify-center items-end overflow-clip">
+                                                                    <div class="h-3 w-18 flex-none flex items-center justify-end font-medium text-psbk-sub dark:text-dark-psbk-sub">
+                                                                        <p class="truncate text-right text-xs">{37}</p>
+                                                                    </div> 
+                                                                </a>
+                                                                <a href="/summoner?name={38}/" data-sveltekit-preload-data="tap" class="flex flex-col h-4 justify-center items-end overflow-clip">
+                                                                    <div class="h-3 w-18 flex-none flex items-center justify-end font-medium text-psbk-sub dark:text-dark-psbk-sub">
+                                                                        <p class="truncate text-right text-xs">{38}</p>
+                                                                    </div> 
+                                                                </a>
+                                                                <a href="/summoner?name={39}/" data-sveltekit-preload-data="tap" class="flex flex-col h-4 justify-center items-end overflow-clip">
+                                                                    <div class="h-3 w-18 flex-none flex items-center justify-end font-medium text-psbk-sub dark:text-dark-psbk-sub">
+                                                                        <p class="truncate text-right text-xs">{39}</p>
+                                                                    </div> 
+                                                                </a>
+                                                            </div> 
+                                                            <div class="flex h-full w-4 flex-col justify-between gap-1">
+                                                                <div class="flex h-4 w-4 overflow-hidden rounded-sm">
+                                                                    <img class="scale-125" src="{25}" alt="champion"> 
+                                                                </div>
+                                                                <div class="flex h-4 w-4 overflow-hidden rounded-sm">
+                                                                    <img class="scale-125" src="{26}" alt="champion"> 
+                                                                </div>
+                                                                <div class="flex h-4 w-4 overflow-hidden rounded-sm">
+                                                                    <img class="scale-125" src="{27}" alt="champion"> </div>
+                                                                    <div class="flex h-4 w-4 overflow-hidden rounded-sm">
+                                                                        <img class="scale-125" src="{28}" alt="champion"> 
+                                                                    </div>
+                                                                    <div class="flex h-4 w-4 overflow-hidden rounded-sm">
+                                                                        <img class="scale-125" src="{29}" alt="champion"> 
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                                
+                                            </div>`
+
+
+
+
+    function makeblocks(datas) {
+
+        const addInner = document.getElementById("addInner");
+        for (var i = 0; i < datas.length; i++) {
+            str = basestring
+
+            for (var j = 0; j < 30; j++) {
+                str = str.replace("{"+j+"}", datas[i][j])
+            }
+
+            for (var j; j < 40; j++){
+                str = str.replace("{"+j+"}", datas[i][j])
+                str = str.replace("{"+j+"}", datas[i][j])
+            }
+            
+            str = str.replace("{40}", datas[i][40])
+            str = str.replace("{41}", datas[i][41])
+            addInner.innerHTML += str;
+        }
+    }
+
+    fetch("http://127.0.0.1:5000/json?morecount=0")
+        .then(res => res.json())
+        .then((data) => {
+            var data = data;
+
+            makeblocks(data);
+        })
+
+
+
+    function moreblock() {
+        fetch("http://127.0.0.1:5000/json?morecount=5")
+        .then(res => res.json())
+        .then((data) => {
+            var data = data;
+
+            makeblocks(data);
+        })
+        
+    }
+
+    function searchPost(){
+        let searchValue = document.getElementById("search-input").value.trim();
+        if(searchValue.length > 1){
+            fetch("/summoner?name="+searchValue+"/")
+            location.href="/summoner?name="+searchValue+"/";
+        }
+        else{
+            alert('소환사 이름이 너무 짧습니다.');
+        }
+
+    }
+
+    document.getElementById('search-input').addEventListener('keyup', function(event)
+    {
+        if(event.key=='Enter'){
+            searchPost();
+        }
+    });
+
+    
+
+
+</script>
+
+<script type="text/javascript">
+    
+</script>
