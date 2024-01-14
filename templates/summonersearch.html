@@ -608,7 +608,7 @@
         }
     }
 
-    fetch("http://127.0.0.1:5000/json?morecount=0")
+    fetch("/json?morecount=0")
         .then(res => res.json())
         .then((data) => {
             var data = data;
@@ -619,7 +619,7 @@
 
 
     function moreblock() {
-        fetch("http://127.0.0.1:5000/json?morecount=5")
+        fetch("/json?morecount=5")
         .then(res => res.json())
         .then((data) => {
             var data = data;
