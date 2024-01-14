@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="https://cdn.lol.ps/static/prod/bc81a871/_app/immutable/assets/index.e113234a.css">
     <link rel="stylesheet" href="https://cdn.lol.ps/static/prod/bc81a871/_app/immutable/assets/index.ec5c98f5.css">
   <style>
-
   </style>
 
  </head>
@@ -28,7 +27,11 @@
     <nav id="menu-container" class="desktop:max-w-screen fixed inset-x-0 top-0 z-[1000] bg-psbl-deep transition-all">
         <div class="flex h-10 flex-row items-center justify-between px-3.5 md:mx-auto md:max-w-[1280px] half-hd:justify-start half-hd:px-0">
             <div class="flex items-center gap-3">
-                <a class="flex h-full w-[131px] flex-none items-center" href="/"><svg fill="none" viewBox="0 0 262 40" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" class="h-5 text-white">
+                <a class="flex h-full w-[131px] flex-none items-center" href="/">
+                    <svg fill="none" viewBox="0 0 262 40" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" class="h-5 text-white">
+                        <img class="h-11 w-11"src="https://static.developer.riotgames.com/img/logo.png">
+                        <span class="font-bold text-white " style="color: rgb(255 255 255/var(--tw-text-opacity)); font-size:20px;">CtrlS</span>
+                    </svg>
                 </a>
                 <i class="hidden h-4.5 w-[1px] bg-white opacity-20 desktop:inline-block"></i>
             </div>
@@ -121,7 +124,7 @@
                                         </div>
                                     </div> 
                                     <div class="flex h-full w-30 flex-col items-end justify-end gap-1 self-end whitespace-nowrap text-right">
-                                        <button class="flex h-8 flex-row items-center justify-center gap-2 rounded bg-white px-3 py-2 text-sm font-bold uppercase text-psbk hover:bg-psbl-mute s-OwKnkHbq5XWO">새로고침
+                                        <button onClick="window.location.reload()" class="flex h-8 flex-row items-center justify-center gap-2 rounded bg-white px-3 py-2 text-sm font-bold uppercase text-psbk hover:bg-psbl-mute s-OwKnkHbq5XWO">새로고침
                                         </button>
                                     </div>
                                 </div> 
@@ -202,7 +205,7 @@
                         <div class="flex w-full flex-col">
                             <div class="flex w-full flex-row justify-between gap-2 px-4 py-2 odd:bg-psbl-mute even:bg-psbl-pale dark:text-dark-psbk dark:odd:bg-dark-psbl-mute dark:even:bg-dark-psbl-pale desktop:h-12 desktop:p-2 desktop:first:rounded-t desktop:last:rounded-b">
                                 <div class="flex w-30 flex-none items-center justify-start overflow-hidden py-1">
-                                    <a class="w-full truncate text-rg font-bold text-psbk hover:underline dark:text-dark-psbk" href="/summoner/베르시?sid=NkjNcTPP9Y-P-CoOcQEdSNmsXfe8y82u6ILwykl3n88i_abh7FZOGziugA&amp;region=kr" data-sveltekit-preload-data="tap">{{Ranker1name}}</a>
+                                    <a class="w-full truncate text-rg font-bold text-psbk hover:underline dark:text-dark-psbk" href="/summoner?name={{Ranker1name}}/" data-sveltekit-preload-data="tap">{{Ranker1name}}</a>
                                 </div> 
                                 <div class="flex w-20 flex-none items-center justify-center py-1 text-center text-sm font-medium desktop:text-rg">{{Ranker1tier}}</div> 
                                 <div class="flex w-10 flex-none items-center justify-center py-1 text-center text-sm font-medium en:w-14 desktop:text-rg">{{Ranker1LP}}</div> 
@@ -212,7 +215,7 @@
                             </div>
                             <div class="flex w-full flex-row justify-between gap-2 px-4 py-2 odd:bg-psbl-mute even:bg-psbl-pale dark:text-dark-psbk dark:odd:bg-dark-psbl-mute dark:even:bg-dark-psbl-pale desktop:h-12 desktop:p-2 desktop:first:rounded-t desktop:last:rounded-b">
                                 <div class="flex w-30 flex-none items-center justify-start overflow-hidden py-1">
-                                    <a class="w-full truncate text-rg font-bold text-psbk hover:underline dark:text-dark-psbk" href="/summoner/River66?sid=xfLM7XOghjIb77bRrQHgyGERHDK0aF42O2QtSgc_DhMNFCqOJyxJZUAb-A&amp;region=kr" data-sveltekit-preload-data="tap">{{Ranker2name}}</a>
+                                    <a class="w-full truncate text-rg font-bold text-psbk hover:underline dark:text-dark-psbk" href="/summoner?name={{Ranker2name}}/" data-sveltekit-preload-data="tap">{{Ranker2name}}</a>
                                 </div> 
                                 <div class="flex w-20 flex-none items-center justify-center py-1 text-center text-sm font-medium desktop:text-rg">{{Ranker2tier}}</div> 
                                 <div class="flex w-10 flex-none items-center justify-center py-1 text-center text-sm font-medium en:w-14 desktop:text-rg">{{Ranker2LP}}</div> 
@@ -222,7 +225,7 @@
                             </div>
                             <div class="flex w-full flex-row justify-between gap-2 px-4 py-2 odd:bg-psbl-mute even:bg-psbl-pale dark:text-dark-psbk dark:odd:bg-dark-psbl-mute dark:even:bg-dark-psbl-pale desktop:h-12 desktop:p-2 desktop:first:rounded-t desktop:last:rounded-b">
                                 <div class="flex w-30 flex-noneitems-center justify-start overflow-hidden py-1">
-                                    <a class="w-full truncate text-rg font-bold text-psbk hover:underline dark:text-dark-psbk" href="/summoner/애니랑뽀뽀쪽?sid=qo5mjFX3yAOZJKhIc_VpJpGCmbUdZg57UrQCI9ogfJBACwY&amp;region=kr" data-sveltekit-preload-data="tap">{{Ranker3name}}</a>
+                                    <a class="w-full truncate text-rg font-bold text-psbk hover:underline dark:text-dark-psbk" href="/summoner?name={{Ranker3name}}/" data-sveltekit-preload-data="tap">{{Ranker3name}}</a>
                                 </div> 
                                 <div class="flex w-20 flex-none items-center justify-center py-1 text-center text-sm font-medium desktop:text-rg">{{Ranker3tier}}</div> 
                                 <div class="flex w-10 flex-none items-center justify-center py-1 text-center text-sm font-medium en:w-14 desktop:text-rg">{{Ranker3LP}}</div> 
@@ -232,7 +235,7 @@
                             </div>
                             <div class="flex w-full flex-row justify-between gap-2 px-4 py-2 odd:bg-psbl-mute even:bg-psbl-pale dark:text-dark-psbk dark:odd:bg-dark-psbl-mute dark:even:bg-dark-psbl-pale desktop:h-12 desktop:p-2 desktop:first:rounded-t desktop:last:rounded-b">
                                 <div class="flex w-30 flex-none items-center justify-start overflow-hidden py-1">
-                                    <a class="w-full truncate text-rg font-bold text-psbk hover:underline dark:text-dark-psbk" href="/summoner/잘지내고있냐고?sid=F3i9mD_GVi8N3oefpPzl_thh62khriZVUjWz-icDkVC1rA&amp;region=kr" data-sveltekit-preload-data="tap">{{Ranker4name}}</a>
+                                    <a class="w-full truncate text-rg font-bold text-psbk hover:underline dark:text-dark-psbk" href="/summoner?name={{Ranker4name}}/" data-sveltekit-preload-data="tap">{{Ranker4name}}</a>
                                 </div> 
                                 <div class="flex w-20 flex-none items-center justify-center py-1 text-center text-sm font-medium desktop:text-rg">{{Ranker4tier}}</div> 
                                 <div class="flex w-10 flex-none items-center justify-center py-1 text-center text-sm font-medium en:w-14 desktop:text-rg">{{Ranker4LP}}</div> 
@@ -242,7 +245,7 @@
                             </div>
                             <div class="flex w-full flex-row justify-between gap-2 px-4 py-2 odd:bg-psbl-mute even:bg-psbl-pale dark:text-dark-psbk dark:odd:bg-dark-psbl-mute dark:even:bg-dark-psbl-pale desktop:h-12 desktop:p-2 desktop:first:rounded-t desktop:last:rounded-b">
                                 <div class="flex w-30 flex-none items-center justify-start overflow-hidden py-1">
-                                    <a class="w-full truncate text-rg font-bold text-psbk hover:underline dark:text-dark-psbk" href="/summoner/백정 슈가?sid=IpbfefW00p-AuR2yg9TmP8i6VTUzSz9iTCbLm6pDEU-gqrw&amp;region=kr" data-sveltekit-preload-data="tap">{{Ranker5name}}</a>
+                                    <a class="w-full truncate text-rg font-bold text-psbk hover:underline dark:text-dark-psbk" href="/summoner?name={{Ranker5name}}/" data-sveltekit-preload-data="tap">{{Ranker5name}}</a>
                                 </div> 
                                 <div class="flex w-20 flex-none items-center justify-center py-1 text-center text-sm font-medium desktop:text-rg">{{Ranker5tier}}</div> 
                                 <div class="flex w-10 flex-none items-center justify-center py-1 text-center text-sm font-medium en:w-14 desktop:text-rg">{{Ranker5LP}}</div> 
