@@ -108,7 +108,7 @@ def summonersearch():
       'CHERRY' : '아레나'
     }
 
-    if '#' in name:
+    if '-' in name:
       puuid = lolIdData['puuid']
       IdUrl = 'https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/{}?api_key={}'.format(puuid,apikey)
       IdUrlinfo = requests.get(IdUrl)
