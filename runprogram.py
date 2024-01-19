@@ -82,9 +82,10 @@ def summonersearch():
     IdUrl = 'https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/{}?api_key={}'.format(name,apikey)
     IdUrlinfo = requests.get(IdUrl)
     IdData = IdUrlinfo.json()
+    lolIdData = [0,1]
 
 
-  if len(IdData) == 1 | len(lolIdData) == 1:
+  if len(IdData) == 1 or len(lolIdData) == 1:
     return render_template('error.html', **locals())
   else:
     Champurl = "https://ddragon.leagueoflegends.com/cdn/{}/data/ko_KR/champion.json".format(version)
