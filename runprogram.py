@@ -156,11 +156,11 @@ def summonersearch():
 
       html = response.text
       soup = BeautifulSoup(html, 'html.parser')
-      s13rank = soup.select_one('#__next > div > div > main > header > div > div.sc-15xrq75-3.iQaUlB > div:nth-child(2) > div.sc-1p3os9u-0.cDYNro.sc-15xrq75-26.fFCujx > div.sc-1p3os9u-6.jYuvKc > div:nth-child(1)')
-      S13rank = s13rank.get_text()
+      #s13rank = soup.select_one('#__next > div > div > main > header > div > div.sc-15xrq75-3.iQaUlB > div:nth-child(2) > div.sc-1p3os9u-0.cDYNro.sc-15xrq75-26.fFCujx > div.sc-1p3os9u-6.jYuvKc > div:nth-child(1)')
+      #S13rank = s13rank.get_text()
 
-      s12rank = soup.select_one('#__next > div > div > main > header > div > div.sc-15xrq75-3.iQaUlB > div:nth-child(2) > div.sc-1p3os9u-0.cDYNro.sc-15xrq75-26.fFCujx > div.sc-1p3os9u-6.jYuvKc > div:nth-child(2)')
-      S12rank = s12rank.get_text()
+      #s12rank = soup.select_one('#__next > div > div > main > header > div > div.sc-15xrq75-3.iQaUlB > div:nth-child(2) > div.sc-1p3os9u-0.cDYNro.sc-15xrq75-26.fFCujx > div.sc-1p3os9u-6.jYuvKc > div:nth-child(2)')
+      #S12rank = s12rank.get_text()
 
     MasteryUrl = 'https://kr.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/{}/top?count=20&api_key={}'.format(puuid,apikey)
     Masteryinfo = requests.get(MasteryUrl)
