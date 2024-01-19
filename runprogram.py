@@ -78,6 +78,7 @@ def summonersearch():
     lolIdUrl = 'https://asia.api.riotgames.com/riot/account/v1/accounts/by-riot-id/{}/{}?api_key={}'.format(lolname,tagline,apikey)
     lolIdUrlinfo = requests.get(lolIdUrl)
     lolIdData = lolIdUrlinfo.json()
+    IdData = [0,1]
   else:
     IdUrl = 'https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/{}?api_key={}'.format(name,apikey)
     IdUrlinfo = requests.get(IdUrl)
