@@ -369,8 +369,10 @@
     function searchPost(){
         let searchValue = document.getElementById("search-input").value.trim();
         if(searchValue.length > 1){
-            fetch("/summoner?name="+searchValue+"/")
-            location.href="/summoner?name="+searchValue+"/";
+            var url = "/summoner?name="+searchValue+"/"
+            url = url.replace(#,"-")
+            fetch(url)
+            location.href=url;
         }
         else{
             alert('소환사 이름이 너무 짧습니다.');
