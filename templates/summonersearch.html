@@ -681,8 +681,8 @@
     function searchPost(){
         let searchValue = document.getElementById("search-input").value.trim();
         if(searchValue.length > 1){
-            var url = "/summoner?name="+searchValue+"/"
-            url = url.replace(#,"-")
+            var url = "/summoner?name="+searchValue+"/";
+            url = url.replace(#,"-");
             fetch(url)
             location.href=url;
         }
