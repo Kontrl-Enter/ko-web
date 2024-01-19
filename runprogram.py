@@ -229,7 +229,7 @@ def summonersearch():
 
 
 
-    RankerUrl = "https://kr.api.riotgames.com/lol/league-exp/v4/entries/RANKED_SOLO_5x5/MASTER/I?page=1&api_key={}".format(apikey)
+    RankerUrl = "https://kr.api.riotgames.com/lol/league-exp/v4/entries/RANKED_SOLO_5x5/CHALLENGER/I?page=1&api_key={}".format(apikey)
     RankerInfo = requests.get(RankerUrl)
     RankerData = RankerInfo.json()
 
