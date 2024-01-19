@@ -72,9 +72,9 @@ def summonersearch():
     value = request.args['name']
     name = str(value)
 
-  if '#' in name:
-    lolname = name[:name.find('#')]
-    tagline = name[name.find('#')+1:]
+  if '-' in name:
+    lolname = name[:name.find('-')]
+    tagline = name[name.find('-')+1:]
     lolIdUrl = 'https://asia.api.riotgames.com/riot/account/v1/accounts/by-riot-id/{}/{}?api_key={}'.format(lolname,tagline,apikey)
     lolIdUrlinfo = requests.get(lolIdUrl)
     lolIdData = lolIdUrlinfo.json()
