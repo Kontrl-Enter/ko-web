@@ -31,7 +31,7 @@ pv = requests.get(perksversion)
 pvdata = pv.json()
 version = pvdata[0]
 name = ''
-apikey = "RGAPI-efca9a9d-ac77-4c02-84ad-1864e0ef64bd"
+apikey = "RGAPI-e89cdf7e-bb01-49c0-8353-93a026ac392a"
 startcount = 0
 
 
