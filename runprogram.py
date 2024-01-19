@@ -84,7 +84,7 @@ def summonersearch():
     IdData = IdUrlinfo.json()
 
 
-  if len(IdData) == 1 || len(lolIdData) == 1:
+  if len(IdData) == 1 | len(lolIdData) == 1:
     return render_template('error.html', **locals())
   else:
     Champurl = "https://ddragon.leagueoflegends.com/cdn/{}/data/ko_KR/champion.json".format(version)
