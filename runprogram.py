@@ -33,6 +33,8 @@ version = pvdata[0]
 name = ''
 apikey = "RGAPI-e89cdf7e-bb01-49c0-8353-93a026ac392a"
 startcount = 0
+lolname = ''
+tagline = ''
 
 
 def get_result(table:dict, targets:list) -> list[dict]:
@@ -57,6 +59,8 @@ def summonersearch():
   global name
   global startcount
   global apikey
+  global lolname
+  global tagline
 
   startcount = 0
 
@@ -68,11 +72,19 @@ def summonersearch():
     value = request.args['name']
     name = str(value)
 
-  IdUrl = 'https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/{}?api_key={}'.format(name,apikey)
-  IdUrlinfo = requests.get(IdUrl)
-  IdData = IdUrlinfo.json()
+  if '#' in name:
+    lolname = name[:name.find('#')]
+    tagline = name[name.find('#')+1:]
+    lolIdUrl = 'https://asia.api.riotgames.com/riot/account/v1/accounts/by-riot-id/{}/{}?api_key={}'.format(lolname,tagline,apikey)
+    lolIdUrlinfo = requests.get(lolIdUrl)
+    lolIdData = lolIdUrlinfo.json()
+  else:
+    IdUrl = 'https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/{}?api_key={}'.format(name,apikey)
+    IdUrlinfo = requests.get(IdUrl)
+    IdData = IdUrlinfo.json()
 
-  if len(IdData) == 1:
+
+  if len(IdData) == 1 || len(lolIdData) == 1:
     return render_template('error.html', **locals())
   else:
     Champurl = "https://ddragon.leagueoflegends.com/cdn/{}/data/ko_KR/champion.json".format(version)
@@ -95,8 +107,21 @@ def summonersearch():
       'CHERRY' : '아레나'
     }
 
-    puuid = IdData['puuid']
-    id = IdData['id']
+    if '#' in name:
+      puuid = lolIdData['puuid']
+      IdUrl = 'https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/{}?api_key={}'.format(puuid,apikey)
+      IdUrlinfo = requests.get(IdUrl)
+      IdData = IdUrlinfo.json()
+      id = IdData['id']
+      name = IdData['name']
+    else:
+      puuid = IdData['puuid']
+      id = IdData['id']
+      lolIdUrl = 'https://asia.api.riotgames.com/riot/account/v1/accounts/by-puuid/{}?api_key={}'.format(puuid,apikey)
+      lolIdUrlinfo = requests.get(lolIdUrl)
+      lolIdData = lolIdUrlinfo.json()
+      lolname = lolIdData['gameName']
+      tagline = lolIdData['tagLine']
 
     IdInfoUrl = 'https://kr.api.riotgames.com/lol/league/v4/entries/by-summoner/{}?api_key={}'.format(id, apikey)
     IdInfoinfo = requests.get(IdInfoUrl)
@@ -109,7 +134,8 @@ def summonersearch():
       SummonerLP = '0 LP'
       profileIconId = IdData['profileIconId']
       SummonerIcon = 'https://ddragon.leagueoflegends.com/cdn/{}/img/profileicon/{}.png'.format(version, profileIconId)
-      SummonerName = IdData['name']
+      SummonerName = lolname
+      Summonertag = tagline
       tierimg = 'https://cdn.dak.gg/lol/images/tier-emblem/2022/provisional.png'
     else:
       iddata = IdInfoData[0]
@@ -126,7 +152,9 @@ def summonersearch():
       SummonerLP = '{} LP'.format(iddata['leaguePoints'])
       profileIconId = IdData['profileIconId']
       SummonerIcon = 'https://ddragon.leagueoflegends.com/cdn/{}/img/profileicon/{}.png'.format(version, profileIconId)
-      SummonerName = IdData['name']
+      SummonerName = lolname
+      Summonertag = tagline
+
       if iddata['tier'] == 'PLATINUM':
         tierimg = 'https://cdn.dak.gg/lol/images/tier-emblem/2022/platinum.png'
       elif iddata['tier'] == 'GOLD':
@@ -147,20 +175,6 @@ def summonersearch():
         tierimg = 'https://cdn.dak.gg/lol/images/tier-emblem/2022/grandmaster.png'
       elif iddata['tier'] == 'CHALLENGER':
         tierimg = 'https://cdn.dak.gg/lol/images/tier-emblem/2022/challenger.png'
-
-
-      asciiname = urllib.parse.quote(name, safe='/', encoding=None, errors=None)
-      url = 'https://your.gg/ko/kr/profile/{}'.format(asciiname)
-
-      response = requests.get(url)
-
-      html = response.text
-      soup = BeautifulSoup(html, 'html.parser')
-      #s13rank = soup.select_one('#__next > div > div > main > header > div > div.sc-15xrq75-3.iQaUlB > div:nth-child(2) > div.sc-1p3os9u-0.cDYNro.sc-15xrq75-26.fFCujx > div.sc-1p3os9u-6.jYuvKc > div:nth-child(1)')
-      #S13rank = s13rank.get_text()
-
-      #s12rank = soup.select_one('#__next > div > div > main > header > div > div.sc-15xrq75-3.iQaUlB > div:nth-child(2) > div.sc-1p3os9u-0.cDYNro.sc-15xrq75-26.fFCujx > div.sc-1p3os9u-6.jYuvKc > div:nth-child(2)')
-      #S12rank = s12rank.get_text()
 
     MasteryUrl = 'https://kr.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/{}/top?count=20&api_key={}'.format(puuid,apikey)
     Masteryinfo = requests.get(MasteryUrl)
