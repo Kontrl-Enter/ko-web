@@ -116,7 +116,7 @@ def summonersearch():
       IdData = IdUrlinfo.json()
       id = IdData['id']
       name = IdData['name']
-      print(puuid)
+      print(tagline)
     else:
       puuid = IdData['puuid']
       id = IdData['id']
