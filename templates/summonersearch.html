@@ -90,12 +90,12 @@
                             <div class="flex h-10 w-full gap-2">
                                 <div>
                                     <div>
-                                        <span class="whitespace-nowrap rounded-2xl bg-psbk px-2 py-1 text-sm text-white">Riottag: #{{Summonertag}}</span>
+                                        <span class="whitespace-nowrap rounded-2xl bg-psbk px-2 py-1 text-sm text-white">Riot Tag: #{{Summonertag}}</span>
                                     </div> 
                                 </div> 
                                 <div>
                                     <div>
-                                        <span class="whitespace-nowrap rounded-2xl bg-psbk px-2 py-1 text-sm text-white">{{S12rank}}</span>
+                                        <span class="whitespace-nowrap rounded-2xl bg-psbk px-2 py-1 text-sm text-white">prev: {{prevname}}</span>
                                     </div> 
                                 </div>
                             </div> 
@@ -680,6 +680,7 @@
 
     function searchPost(){
         let searchValue = document.getElementById("search-input").value.trim();
+        searchValue = searchValue.replace(/#/g,"-")
         if(searchValue.length > 1){
             fetch("/summoner?name="+searchValue+"/")
             location.href="/summoner?name="+searchValue+"/";

@@ -140,6 +140,7 @@ def summonersearch():
       SummonerName = lolname
       Summonertag = tagline
       tierimg = 'https://cdn.dak.gg/lol/images/tier-emblem/2022/provisional.png'
+      prevname = name
     else:
       iddata = IdInfoData[0]
       queueType = iddata['queueType']
@@ -157,6 +158,7 @@ def summonersearch():
       SummonerIcon = 'https://ddragon.leagueoflegends.com/cdn/{}/img/profileicon/{}.png'.format(version, profileIconId)
       SummonerName = lolname
       Summonertag = tagline
+      prevname = name
 
       if iddata['tier'] == 'PLATINUM':
         tierimg = 'https://cdn.dak.gg/lol/images/tier-emblem/2022/platinum.png'
