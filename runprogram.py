@@ -116,6 +116,7 @@ def summonersearch():
       IdData = IdUrlinfo.json()
       id = IdData['id']
       name = IdData['name']
+      lolname = lolIdData['gameName']
       tagline = lolIdData['tagLine']
     else:
       puuid = IdData['puuid']
@@ -125,6 +126,7 @@ def summonersearch():
       lolIdData = lolIdUrlinfo.json()
       lolname = lolIdData['gameName']
       tagline = lolIdData['tagLine']
+      name = IdData['name']
 
     IdInfoUrl = 'https://kr.api.riotgames.com/lol/league/v4/entries/by-summoner/{}?api_key={}'.format(id, apikey)
     IdInfoinfo = requests.get(IdInfoUrl)
@@ -682,4 +684,4 @@ def give_rotationjson():
   return json.dumps(RotationinfoList)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(debug=True)
