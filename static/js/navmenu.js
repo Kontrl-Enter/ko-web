@@ -2,7 +2,7 @@ var navcontainer = `<div class="flex h-10 flex-row items-center justify-between 
             <div class="flex items-center gap-3">
                 <a class="flex h-full w-[131px] flex-none items-center" href="/"><svg fill="none" viewBox="0 0 262 40" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" class="h-5 text-white">
                     <svg fill="none" viewBox="0 0 262 40" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" class="h-5 text-white">
-                        <img class="h-9 w-15"src="/static/image/logo.png">
+                        <img class="h-9 w-20"src="/static/image/logo.png">
                     </svg>
                 </a>
                 <i class="hidden h-4.5 w-[1px] bg-white opacity-20 desktop:inline-block"></i>
