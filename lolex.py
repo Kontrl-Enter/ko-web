@@ -3,15 +3,6 @@ from pip import main
 def install(mname):
     main(["install", mname])
 
-#install("requests")
-#install("pandas")
-#install("numpy")
-#install("Pillow")
-#install("IPython")
-#install("Flask")
-#install("BeautifulSoup4")
-#install("urllib")
-
 
 import requests
 import json
@@ -26,6 +17,27 @@ from bs4 import BeautifulSoup
 
 app = Flask(__name__)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 롤 전적검색 프로젝트 코드 시작
+
 perksversion = "https://ddragon.leagueoflegends.com/api/versions.json"
 pv = requests.get(perksversion)
 pvdata = pv.json()
@@ -36,7 +48,6 @@ startcount = 0
 lolname = ''
 tagline = ''
 
-
 def get_result(table:dict, targets:list) -> list[dict]:
   result = list()
   for target in targets:
@@ -46,9 +57,8 @@ def get_result(table:dict, targets:list) -> list[dict]:
       print(f"{target} not in table")
   return result
 
-
 @app.route('/')
-def home():
+def lolexhome():
 
   presentversion = "ver {}".format(version)
 
@@ -682,6 +692,11 @@ def give_rotationjson():
 
 
   return json.dumps(RotationinfoList)
+
+#롤 전적검색 프로젝트 코드 끝
+
+
+
 
 if __name__ == '__main__':
     app.run('0.0.0.0',port=5000)
