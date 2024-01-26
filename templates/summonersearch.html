@@ -588,7 +588,7 @@
         }
     }
 
-    fetch("/json?morecount=0")
+    fetch("/lolex/json?morecount=0")
         .then(res => res.json())
         .then((data) => {
             var data = data;
@@ -599,7 +599,7 @@
 
 
     function moreblock() {
-        fetch("/json?morecount=5")
+        fetch("/lolex/json?morecount=5")
         .then(res => res.json())
         .then((data) => {
             var data = data;
@@ -613,8 +613,8 @@
         let searchValue = document.getElementById("search-input").value.trim();
         searchValue = searchValue.replace(/#/g,"-")
         if(searchValue.length > 1){
-            fetch("/summoner?name="+searchValue+"/")
-            location.href="/summoner?name="+searchValue+"/";
+            fetch("/lolex/summoner?name="+searchValue+"/")
+            location.href="/lolex/summoner?name="+searchValue+"/";
         }
         else{
             alert('소환사 이름이 너무 짧습니다.');

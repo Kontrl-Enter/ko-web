@@ -17,18 +17,10 @@ from bs4 import BeautifulSoup
 
 app = Flask(__name__)
 
+@app.route('/')
+def myhome():
 
-
-
-
-
-
-
-
-
-
-
-
+  return render_template('intro.html', **locals())
 
 
 
@@ -57,14 +49,14 @@ def get_result(table:dict, targets:list) -> list[dict]:
       print(f"{target} not in table")
   return result
 
-@app.route('/')
+@app.route('/lolex')
 def lolexhome():
 
   presentversion = "ver {}".format(version)
 
   return render_template('home.html', **locals())
 
-@app.route('/summoner', methods=['POST', 'GET'])
+@app.route('/lolex/summoner', methods=['POST', 'GET'])
 def summonersearch():
   global name
   global startcount
@@ -292,7 +284,7 @@ def summonersearch():
     return render_template('summonersearch.html', **locals())
 
 
-@app.route('/json', methods=['POST', 'GET'])
+@app.route('/lolex/json', methods=['POST', 'GET'])
 def give_json():
   global startcount
   endcount = 5
@@ -643,7 +635,7 @@ def give_json():
 
   return json.dumps(RecordinfoList)
 
-@app.route('/rotationjson')
+@app.route('/lolex/rotationjson')
 def give_rotationjson():
   global version
 
