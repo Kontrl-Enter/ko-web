@@ -21,7 +21,7 @@ var navcontainer = `<div class="flex h-10 flex-row items-center justify-between 
                 <a class="h-10 flex-none justify-center rounded px-2 py-2 text-md font-regular text-white hover:bg-psbl-dark hover:font-medium dark:text-dark-psbk" data-sveltekit-preload-data="tap" href="/ranking?lane=-1&amp;page=1&amp;region=kr">개발자 블로그</a> 
             </div> 
             <div class="relative flex-none">
-                <a class="h-10 flex-none justify-center rounded px-2 py-2 text-md font-regular text-white hover:bg-psbl-dark hover:font-medium dark:text-dark-psbk" data-sveltekit-preload-data="tap" href="/lab">개발자 연구실</a>
+                <a class="h-10 flex-none justify-center rounded px-2 py-2 text-md font-regular text-white hover:bg-psbl-dark hover:font-medium dark:text-dark-psbk" data-sveltekit-preload-data="tap" href="/lab">개발자 홈</a>
             </div>
         </div>`
 
